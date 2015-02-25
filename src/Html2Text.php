@@ -35,6 +35,7 @@ class Html2Text {
 	 */
 	static function convert($html) {
 		$html = static::fixNewlines($html);
+		$html = mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8');
 
 		$doc = new \DOMDocument();
 		if (!$doc->loadHTML($html)) {
