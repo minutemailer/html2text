@@ -236,7 +236,7 @@ class Html2Text {
 				if ($href == null) {
 					// it doesn't link anywhere
 					if ($node->getAttribute("name") != null) {
-						$output = "[$output]";
+						$output = $output;
 					}
 				} else {
 					if ($href == $output || $href == "mailto:$output" || $href == "http://$output" || $href == "https://$output") {
@@ -245,7 +245,7 @@ class Html2Text {
 					} else {
 						// replace it
 						if ($output) {
-							$output = "[$output]($href)";
+							$output = $output . ": " . $href;
 						} else {
 							// empty string
 							$output = $href;
