@@ -40,4 +40,20 @@ class Html2TextTest extends PHPUnit_Framework_TestCase {
 		$this->doTest("table");
 	}
 
+	function testNbsp() {
+		$this->doTest("nbsp");
+	}
+
+	function testLists() {
+		$this->doTest("lists");
+	}
+
+	function testFullEmail() {
+		$this->doTest("full_email");
+	}
+
+	function testImages() {
+		$this->doTest("images");
+	}
+
 }
